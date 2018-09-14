@@ -1,0 +1,66 @@
+<%include ../partials/header %>
+<div class="tabulator"></div>
+<div class="container">
+<div class="row">
+    <div class="col-md-3">
+        <p class="lead">Kampovi</p>
+        <div class="list-group">
+            <li class="list-group-item active">Info 1</li>
+            <li class="list-group-item">Info 2</li>
+            <li class="list-group-item">Info 3</li>
+         </div>
+    </div>
+    <div class="col-md-9">
+        <div class="thumbnail">
+            
+            <img  class="image-responsive"src="<%=slanina.slika%>">
+            <div class="caption-full">
+                <h4 class="pull-right"><%=slanina.cena %>$/noc</h4> 
+                <h4><a><%= slanina.ime %></a></h4>
+                <p><%=slanina.opis %></p>
+                <p>Postovano od strane: <%=slanina.autor.username %></p>
+
+            </div>
+
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success" href="/kampovi/<%=slanina._id%>/komentari/nov">Dodaj Nov Komentar</a>
+                    <%if(trenutniKorisnik && slanina.autor.id.equals(trenutniKorisnik._id)){%>
+                        <a class="btn btn-warning" href="/kampovi/<%=slanina._id%>/edit">Edituj Kamp</a>
+                        <form style="display:inline"action="/kampovi/<%=slanina._id%>?_method=DELETE" method="post">
+                            <button class="btn btn-danger">Izbrsi kamp</button>
+                        </form>
+                    <%}%>
+                </div>
+                <hr>
+                
+                   <% slanina.komentars.forEach(function(sss){%>
+                    <div class="row">
+                   <div class="col-md-12">
+                         <strong> <%=sss.autor.username %></strong> 
+                       <p>
+                          <%=sss.tekst %>
+                       </p>
+
+                       <%if(trenutniKorisnik && sss.autor.id.equals(trenutniKorisnik._id)){%>
+                       <a class="btn btn-warning" href="/kampovi/<%=slanina.id%>/komentari/<%=sss._id%>/edit">Edituj komentar</a>
+                       <form style="display:inline" action="/kampovi/<%=slanina.id%>/komentari/<%=sss._id%>?_method=DELETE" method="POST">
+                       <input value="Izbrisi komentar"class="btn btn-danger" type="submit">
+                       <% } %> 
+                       
+                       
+                       </form>
+                   </div>
+                </div>
+                
+               <%})%>
+
+
+
+</div>
+<div class='col-md-6'>
+<h1>Ovo je template za prikazivanje</h1>
+<a class="btn btn-info" href="/kampovi">Vrati se nazad</a>
+</div>
+</div>
+<%include ../partials/footer%>

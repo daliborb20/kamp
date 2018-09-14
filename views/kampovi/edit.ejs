@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+<div class="container">
+
+<form id="forma2"class="form-group"action="/kampovi/<%= edit._id %>?_method=PUT " method = "post">
+    <h1><em>Edituj post <%=edit.ime %></em></h1>
+    <input class="imena2" value = "<%=edit.ime %>" type="text" class="form-control"  name="ime_kampa" placeholder="Ime">
+    <input type="number" min="0.01" step="0.01"class="imena2"  name="cena_kampa" value="<%=edit.cena %>">
+    <input class="imena2" value = "<%=edit.slika %>"type="text" name="url_slike" class="form-control" placeholder="Url do slike">
+    <input class="imena2" value = "<%= edit.opis %>" type="text" name="opis_kampa" class="form-control" placeholder="Unesite kratak opis kampa">
+    <button >Upisi</button>
+
+</form>
+
+<button id="dugme1"><a href="/kampovi">Vrati se nazad</a></button>
+</div>
+<% include ../partials/footer%>

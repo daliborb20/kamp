@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YELP Camp</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/glavni.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round " rel="stylesheet">
+    </head>
+    <nav id="traka"class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header"><strong><a href="/kampovi" class="navbar-brand">Kampovi</a></strong></div> 
+        <div class="collapse navbar-collapse pull-right">
+            <ul class="nav navbar-nav">
+            <%if(!trenutniKorisnik){%>
+                <li><a href="/registracija">Register</a></li>
+                <li><a href="/login">Login</a></li>
+
+            <%}else{%>
+                <li><a herf="#">Ulogovani ste kao <strong><%= trenutniKorisnik.username %></strong></a></li>
+                <li><a href="/logout">Logout</a></li>
+            <%}%>
+            </ul>
+        </div>
+    </div>
+    
+    </nav>
+<div class="container">
+    <% if(greska && greska.length > 0){ %>
+    <div class="alert alert-danger"> <%= greska %></div>
+    <%} %>
+    <%if(uspeh && uspeh.length > 0){ %>
+    <div class="alert alert-success"> <%= uspeh %></div>
+    <%} %>
+</div>

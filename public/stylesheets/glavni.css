@@ -1,0 +1,103 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-image: linear-gradient(45deg, #ea5a6f,  #de791e, #fccf3a);
+    color:whitesmoke;
+}
+.thumbnail img {
+    width: 100%; 
+}
+.thumbnail{
+     padding: 0;
+}
+.thumbnail .caption-full{
+    padding: 90px; 
+}
+
+#forma .imena, #forma button{
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    padding:7px;
+    font-size: 1.2em;
+    border: white solid 1px;
+    margin-top:4px;
+    background-color: #88294D;
+    color:whitesmoke;
+
+}
+#forma2 .imena2, #forma2 button{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding:7px;
+    font-size: 1.2em;
+    border: white solid 1px;
+    margin-top:4px;
+    background-color: #88294D;
+    color:whitesmoke;
+
+}
+#dugme1{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    padding:7px;
+    font-size: 1.2em;
+    border: white solid 1px;
+    margin-top:4px;
+    color:whitesmoke;
+    background-color: #E7625A;
+
+
+}
+#dugme1 a{
+    color:whitesmoke;
+}
+#forma h1{
+    text-align: center;
+    text-transform: uppercase;
+    color:whitesmoke;
+}
+#forma2 h1{
+    text-align: center;
+    text-transform: uppercase;
+    color:whitesmoke;
+}
+#forma{
+    width:90%;
+    margin: 0 auto;
+    padding: 3%;
+    height: 80%;
+}
+#forma2{
+    width:90%;
+    margin: 0 auto;
+    padding: 3%;
+    height: 80%;
+}
+.container-fluid {
+        background-color:#88294D;
+        color:red;
+        border:none;
+}
+li ~ a{
+    color:whitesmoke;
+}
+.navbar-default .navbar-nav>li>a{
+    color:whitesmoke;
+}
+.navbar-default .navbar-brand{
+    color:whitesmoke;
+}
+nav#traka.navbar.navbar-default{
+    border:0;
+}
+::placeholder{
+    color:whitesmoke;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+}

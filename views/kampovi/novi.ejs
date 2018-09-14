@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+<div class="container">
+<h1> Napravi novi kamp</h1>
+<form class="form-group"action="/kampovi" method = "post">
+    <input type="text" class="form-control"  name="imeKampa" placeholder="Ime">
+    <input type="number" min="0.01" step="0.01"class="form-control"  name="cenaKampa" placeholder="Cena">
+    <input type="text" name="urlSlike" class="form-control" placeholder="Url do slike">
+    <input type="text" name="opisKampa" class="form-control" placeholder="Unesite kratak opis kampa">
+    <button class="btn btn-success">Upisi</button>
+
+</form>
+
+<a href="/kampovi">Vrati se nazad</a>
+</div>
+<% include ../partials/footer%>

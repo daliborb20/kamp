@@ -1,0 +1,14 @@
+<% include ../partials/header %>
+
+<div class="container">
+<h1> Izmeni komentar: <%= kampovi_id %> </h1>
+<form class="form-group"action="/kampovi/<%=kampovi_id %>/komentari/<%=komm._id %>?_method=PUT" method = "post">
+    <input type="text" class="form-control"  name="komentar[tekst]" value="<%= komm.tekst  %>">
+    <button class="btn btn-success">Upisi</button>
+
+</form>
+
+<a href="/kampovi">Vrati se nazad</a>
+</div>
+
+<% include ../partials/footer%>

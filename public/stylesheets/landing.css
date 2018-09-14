@@ -1,0 +1,78 @@
+body{
+     background-color: #000;
+}
+#landing-header{
+     z-index: 1;
+     position: relative; /*a bi se koristio z-index neophodno je menjanje iz static, koja je poddrazumevana vrednost u relative   */
+     text-align: center;
+     padding-top: 40vh;
+}
+#landing-header h1{
+     color:white;
+}
+.slideshow{
+     position: fixed;
+     width:100%;
+     height: 100%;
+     top:0;
+     left:0;
+     z-index: 0;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+
+}
+.slideshow li {
+     width: 100%;
+     height:100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background-size: cover;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+     opacity: 0;
+     z-index: 0;
+     animation: imageAnimation 50s linear infinite;
+
+}
+.slideshow li:nth-child(1) {
+     background-image: url(https://images.unsplash.com/photo-1529590003495-b2646e2718bf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bb1e2d049da521014328fb1553cda060&auto=format&fit=crop&w=1610&q=80);
+}
+.slideshow li:nth-child(2){
+     background-image: url(https://images.unsplash.com/photo-1536420124392-79a70082fbe5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=02eb82f45ae272cfb10ceac017eab519&auto=format&fit=crop&w=1600&q=80);
+     animation-delay: 10s;
+}
+.slideshow li:nth-child(3){
+     background-image: url(https://images.unsplash.com/photo-1536483354957-362e50517174?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3aa877748aae0eaaa5f4023fc08c87d7&auto=format&fit=crop&w=1834&q=80);
+     animation-delay: 10s;
+}
+
+.slideshow li:nth-child(4){
+      background-image: url(https://images.unsplash.com/photo-1532240916534-3193d70b73f5?ixlib=rb-0.3.5&s=66ef23008db3052153a8ff3835bcf3b0&auto=format&fit=crop&w=634&q=80);
+      animation-delay: 20s;
+    
+}
+@keyframes imageAnimation {
+     0% {
+          opacity: 0;
+          animation-timing-function: ease-in;
+     }
+     10% {
+          opacity: 1;
+          animation-timing-function: ease-in;
+     }
+     20% {
+          opacity: 1;
+          animation-timing-function: ease-in;
+     }
+
+     30% {
+          opacity: 0;
+          animation-timing-function: ease-in;
+     }
+
+
+
+}
+

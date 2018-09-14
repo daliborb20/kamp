@@ -1,0 +1,36 @@
+<% include ../partials/header %>
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+             <h1>Ovo je strana sa kampovima</h1>
+             <p>Pogledajte nase ljepote</p>
+              <p>
+                <a href="/kampovi/nov" class="btn btn-primary btn-lg">Dodaj novi kamp</a>
+             </p>
+        </div>
+
+    </header>
+
+
+<div class="row" style="display:flax; flex-wrap:wrap; text-align:center">
+   <%lokacije.forEach(function(mesto){ %>
+    <div class="col-md-3 col-sm-6 col-lg-4">
+        <div class="thumbnail">
+            <img src=" <%=mesto.slika %>">
+            <div class="caption>"
+                <h3> <%=mesto.ime%> </h3>
+            </div>
+            <p>
+                <a href="/kampovi/<%= mesto._id %> " class="btn btn-success">Prikazi vise informacija</a>
+            
+            </p>
+            </div>
+        </div>
+ <%})%>
+
+
+</div>
+
+</div>
+
+<% include ../partials/footer %>
